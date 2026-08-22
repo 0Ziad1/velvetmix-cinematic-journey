@@ -29,7 +29,7 @@ export function Ingredients() {
         if (!el) return;
         const distance = el.scrollWidth - window.innerWidth + 96;
         if (distance <= 0) return;
-        gsap.to(el, {
+        const scrollTween = gsap.to(el, {
           x: rtl ? distance : -distance,
           ease: "none",
           scrollTrigger: {
@@ -50,7 +50,7 @@ export function Ingredients() {
               ease: "none",
               scrollTrigger: {
                 trigger: card,
-                containerAnimation: gsap.getTweensOf(el)[0],
+                containerAnimation: scrollTween,
                 start: "left right",
                 end: "right left",
                 scrub: true,
@@ -58,6 +58,7 @@ export function Ingredients() {
             },
           );
         });
+
       });
 
       mm.add("(max-width: 1023px)", () => {
