@@ -3,7 +3,7 @@ import { useLang } from "@/lib/i18n";
 import { gsap, useGSAP, prefersReducedMotion } from "@/lib/gsap";
 
 export const CONTACT = {
-  phones: ["0541004444", "0544252422"],
+  phones: ["+966 54 100 4444", "+966 54 425 2422"],
   email: "info@salmantradingsa.com",
 };
 
