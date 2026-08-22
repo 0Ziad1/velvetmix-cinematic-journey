@@ -10,6 +10,7 @@ import chocolateImg from "@/assets/chocolate.jpg";
 import chipsImg from "@/assets/chocolate-chips.jpg";
 import saucesImg from "@/assets/topping-sauces.jpg";
 import fillingsImg from "@/assets/cake-fillings.jpg";
+import toastImg from "@/assets/toastLoaf.jpg"
 
 /**
  * Centralized product data.
@@ -258,6 +259,39 @@ export const products: Product[] = [
         "قوام ثابت",
         "رطب وهش",
         "جودة ونكهة ثابتة",
+      ],
+      packaging: PACK_AR,
+    },
+  },
+  {
+    id: "toast",
+    image: toastImg,
+    motion: "center-scale",
+    en: {
+      nav: "Toast",
+      name: "Toast Mix",
+      description: "Mix for the preparation of toast products.",
+
+      characteristics: [
+        "Soft and spongy texture",
+        "uniform slices",
+        "mild and delicious taste",
+        "high quality and suitable for everyday use",
+      ],
+      packaging: PACK_EN,
+    },
+    ar: {
+      nav: "التوست",
+      name: "خلطة التوست",
+      description: "خلطة لتحضير منتجات التوست.",
+      characteristics: [
+        "ملمس ناعم وإسفنجي",
+
+        "شرائح متساوية",
+
+        "طعم خفيف ولذيذ",
+
+        "جودة عالية ومناسبة للاستخدام اليومي"
       ],
       packaging: PACK_AR,
     },
