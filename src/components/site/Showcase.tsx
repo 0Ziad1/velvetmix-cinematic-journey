@@ -32,8 +32,8 @@ export function Showcase({
       gsap.fromTo(
         ".sc-visual",
         variant === "liquid"
-          ? { scale: 1.3, yPercent: 12, filter: "blur(8px)" }
-          : { scale: 0.82, rotate: 6 * dir, filter: "blur(6px)" },
+          ? { scale: 1.3, yPercent: 12 }
+          : { scale: 0.82, rotate: 6 * dir},
         {
           scale: 1,
           rotate: 0,
