@@ -55,6 +55,8 @@ const dict = {
     "menu.products": "Products",
     "footer.rights": "All rights reserved.",
     "footer.tag": "Saudi manufacturer of baking mixes, dessert mixes and powdered food products.",
+    "about.experience": "Years of Experience",
+    "about.experienceText": "Excellence in bakery, confectionery & food solutions.",
   },
   ar: {
     "nav.home": "الرئيسية",
@@ -101,6 +103,8 @@ const dict = {
     "menu.products": "المنتجات",
     "footer.rights": "جميع الحقوق محفوظة.",
     "footer.tag": "مصنع سعودي لخلطات المخابز والحلويات والمنتجات الغذائية البودرة.",
+    "about.experience": "سنة من الخبرة",
+    "about.experienceText": "خبرة وتميز في حلول المخابز والحلويات والمنتجات الغذائية.",
   },
 } as const;
 

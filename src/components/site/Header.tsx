@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLang } from "@/lib/i18n";
 import { scrollToId } from "./SmoothScroll";
+import logo from "@/assets/logo.png";
 
 export function Header() {
   const { t, lang, setLang } = useLang();
@@ -29,11 +30,17 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 sm:h-20 sm:px-8">
+        
+        {/* Logo */}
         <button
           onClick={() => scrollToId("home")}
-          className="font-display text-lg font-extrabold uppercase tracking-[0.22em] text-foreground sm:text-xl"
+          className="flex items-center"
         >
-          Velvet<span className="text-accent">Mix</span>
+          <img
+            src={logo}
+            alt="VelvetMix"
+            className="h-13 w-auto object-contain sm:h-12"
+          />
         </button>
 
         <nav className="hidden items-center gap-9 md:flex">
@@ -52,16 +59,22 @@ export function Header() {
           <button
             onClick={() => setLang("en")}
             className={`px-2 py-1 transition-colors ${
-              lang === "en" ? "text-accent" : "text-muted-foreground hover:text-foreground"
+              lang === "en"
+                ? "text-accent"
+                : "text-muted-foreground hover:text-foreground"
             }`}
           >
             EN
           </button>
+
           <span className="text-border">|</span>
+
           <button
             onClick={() => setLang("ar")}
             className={`px-2 py-1 text-sm normal-case tracking-normal transition-colors ${
-              lang === "ar" ? "text-accent" : "text-muted-foreground hover:text-foreground"
+              lang === "ar"
+                ? "text-accent"
+                : "text-muted-foreground hover:text-foreground"
             }`}
           >
             العربية
