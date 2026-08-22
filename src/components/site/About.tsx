@@ -46,7 +46,7 @@ export function About() {
         scrollTrigger: { trigger: ".ab-vision", start: "top 85%" },
       });
     },
-    { scope: root, dependencies: [lang] },
+    { scope: root, dependencies: [] },
   );
 
   return (

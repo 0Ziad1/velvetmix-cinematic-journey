@@ -29,76 +29,79 @@ export function ProductSection({ product, index }: { product: Product; index: nu
   const copy = product[lang];
 
   useGSAP(
-    () => {
-      if (prefersReducedMotion()) return;
-      const rtl = lang === "ar";
-      const dirSign = rtl ? -1 : 1;
+  () => {
+    if (prefersReducedMotion()) return;
 
-      const from = { ...motionFrom[product.motion] };
-      if (typeof from.xPercent === "number") from.xPercent *= dirSign;
+    const rtl = lang === "ar";
+    const dirSign = rtl ? -1 : 1;
 
-      gsap.fromTo(
-        ".p-visual",
-        from,
-        {
-          ...motionTo[product.motion],
-          ease: "none",
-          scrollTrigger: {
-            trigger: root.current,
-            start: "top bottom",
-            end: "center center",
-            scrub: 0.6,
-          },
-        },
-      );
+    const from = { ...motionFrom[product.motion] };
 
-      gsap.to(".p-visual", {
-        yPercent: -12,
-        scale: 0.92,
-        opacity: 0.35,
+    if (typeof from.xPercent === "number") {
+      from.xPercent *= dirSign;
+    }
+
+    // Product enters and settles into its position
+    gsap.fromTo(
+      ".p-visual",
+      from,
+      {
+        ...motionTo[product.motion],
         ease: "none",
         scrollTrigger: {
           trigger: root.current,
-          start: "center center",
-          end: "bottom top",
+          start: "top bottom",
+          end: "center center",
           scrub: 0.6,
         },
-      });
+      },
+    );
 
-      gsap.from(".p-reveal", {
-        y: 40,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.09,
-        ease: "power3.out",
-        scrollTrigger: { trigger: root.current, start: "top 62%" },
-      });
+    // Text reveal
+    gsap.from(".p-reveal", {
+      y: 40,
+      opacity: 0,
+      duration: 0.9,
+      stagger: 0.09,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: root.current,
+        start: "top 62%",
+      },
+    });
 
-      gsap.from(".p-index", {
-        xPercent: 30 * dirSign,
-        opacity: 0,
+    // Section number
+    gsap.from(".p-index", {
+      xPercent: 30 * dirSign,
+      opacity: 0,
+      ease: "none",
+      scrollTrigger: {
+        trigger: root.current,
+        start: "top bottom",
+        end: "top 30%",
+        scrub: true,
+      },
+    });
+
+    // Glow
+    gsap.fromTo(
+      ".p-glow",
+      { opacity: 0.15, scale: 0.8 },
+      {
+        opacity: 0.5,
+        scale: 1.15,
         ease: "none",
-        scrollTrigger: { trigger: root.current, start: "top bottom", end: "top 30%", scrub: true },
-      });
-
-      gsap.fromTo(
-        ".p-glow",
-        { opacity: 0.15, scale: 0.8 },
-        {
-          opacity: 0.5,
-          scale: 1.15,
-          ease: "none",
-          scrollTrigger: {
-            trigger: root.current,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: true,
-          },
+        scrollTrigger: {
+          trigger: root.current,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
         },
-      );
-    },
-    { scope: root, dependencies: [lang, product.id] },
-  );
+      },
+    );
+  },
+  { scope: root, dependencies: [ product.id] },
+);
 
   return (
     <section

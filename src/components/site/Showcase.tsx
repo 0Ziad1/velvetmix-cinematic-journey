@@ -70,7 +70,7 @@ export function Showcase({
         scrollTrigger: { trigger: root.current, start: "top 65%" },
       });
     },
-    { scope: root, dependencies: [lang, data.id] },
+    { scope: root, dependencies: [ data.id] },
   );
 
   return (

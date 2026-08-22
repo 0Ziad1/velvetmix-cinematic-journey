@@ -24,7 +24,7 @@ export function Contact() {
         scrollTrigger: { trigger: root.current, start: "top 70%" },
       });
     },
-    { scope: root, dependencies: [lang] },
+    { scope: root, dependencies: [] },
   );
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {

@@ -46,7 +46,7 @@ export function Hero() {
         scrollTrigger: { trigger: root.current, start: "top top", end: "bottom top", scrub: true },
       });
     },
-    { scope: root, dependencies: [lang] },
+    { scope: root, dependencies: [] },
   );
 
   const letters = "VELVETMIX".split("");
@@ -67,13 +67,23 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,var(--cocoa)_78%)]" />
 
       <div className="hero-inner relative z-10 w-full max-w-[1400px] px-5 text-center sm:px-8">
-        <h1 className="display-xl flex justify-center overflow-hidden text-[clamp(2.75rem,12vw,11rem)] text-foreground">
-          {letters.map((c, i) => (
-            <span key={i} className="hero-letter inline-block">
-              {c}
-            </span>
-          ))}
-        </h1>
+   <h1 className="display-xl flex flex-col items-center justify-center overflow-hidden text-[clamp(2.75rem,12vw,11rem)] text-foreground">
+  <span>
+    {"VELVET".split("").map((c, i) => (
+      <span key={i} className="hero-letter inline-block">
+        {c}
+      </span>
+    ))}
+  </span>
+
+  <span>
+    {"MIX".split("").map((c, i) => (
+      <span key={i} className="hero-letter inline-block">
+        {c}
+      </span>
+    ))}
+  </span>
+</h1>
 
         <div className="hero-line mx-auto mt-6 h-px w-40 origin-center bg-accent/70 sm:w-64" />
 

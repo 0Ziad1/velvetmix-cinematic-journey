@@ -120,14 +120,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const el = document.documentElement;
+
+    // Keep the website layout LTR for both languages.
+    // Only the language of the document changes.
     el.lang = lang;
-    el.dir = lang === "ar" ? "rtl" : "ltr";
+    el.dir = "ltr";
   }, [lang]);
 
   const value = useMemo<Ctx>(
     () => ({
       lang,
-      dir: lang === "ar" ? "rtl" : "ltr",
+      dir: "ltr",
       setLang,
       t: (k) => dict[lang][k],
     }),
