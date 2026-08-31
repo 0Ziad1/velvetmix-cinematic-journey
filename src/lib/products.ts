@@ -335,7 +335,7 @@ export const products: Product[] = [
     },
   },
   {
-    id: "Kaiser",
+    id: "kaiser",
     image: kaiserImg,
     motion: "layered",
     en: {
