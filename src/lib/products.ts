@@ -20,7 +20,7 @@ import frenchBreadtImg from "@/assets/frenchBread.jpg"
  * Replace the `image` value of any product with real VelvetMix product
  * photography (drop the file in src/assets and update the import above).
  */
-
+//
 export type Motion =
   | "center-scale"
   | "multi-direction"
