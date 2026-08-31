@@ -11,7 +11,10 @@ import chipsImg from "@/assets/chocolate-chips.jpg";
 import saucesImg from "@/assets/topping-sauces.jpg";
 import fillingsImg from "@/assets/cake-fillings.jpg";
 import toastImg from "@/assets/toastLoaf.jpg"
-
+import briocheImg from "@/assets/brioche.jpg"
+import kaiserImg from "@/assets/Kaiser.jpg"
+import croissantImg from "@/assets/croissant.jpg"
+import frenchBreadtImg from "@/assets/frenchBread.jpg"
 /**
  * Centralized product data.
  * Replace the `image` value of any product with real VelvetMix product
@@ -270,7 +273,7 @@ export const products: Product[] = [
     en: {
       nav: "Toast",
       name: "Toast Mix",
-      description: "Mix for the preparation of toast products.",
+      description: "Soft and light toast bread, ideal for preparing sandwiches and breakfast meals.",
 
       characteristics: [
         "Soft and spongy texture",
@@ -283,7 +286,7 @@ export const products: Product[] = [
     ar: {
       nav: "التوست",
       name: "خلطة التوست",
-      description: "خلطة لتحضير منتجات التوست.",
+      description: "خبز توست ناعم وخفيف، مثالي لتحضير السندويشات ووجبات الإفطار.",
       characteristics: [
         "ملمس ناعم وإسفنجي",
 
@@ -292,6 +295,147 @@ export const products: Product[] = [
         "طعم خفيف ولذيذ",
 
         "جودة عالية ومناسبة للاستخدام اليومي"
+      ],
+      packaging: PACK_AR,
+    },
+  },
+  {
+    id: "Brioche",
+    image: briocheImg,
+    motion: "multi-direction",
+    en: {
+      nav: "Brioche",
+      name: "Brioche Bread ",
+      description: "Rich and soft brioche bread with a smooth texture and distinctive flavor, ideal for sandwiches, burgers, and a variety of baked products.",
+
+      characteristics: [
+        "Soft and spongy texture",
+        "Rich and distinctive flavor",
+        "Good spongy texture",
+        "High quality",
+        "Uniform shape"
+      ],
+      packaging: PACK_EN,
+    },
+    ar: {
+      nav: "خبز البريوش",
+      name: " خبز البريوش",
+      description: "خبز بريوش غني وناعم ذو ملمس ناعم ونكهة مميزة، مثالي للسندويشات والبرغر ومجموعة متنوعة من المخبوزات.",
+      characteristics: [
+        "قوام ناعم و طري",
+
+        "نكهة غنية ومميزة",
+
+        "ملمس اسفنجي جيد",
+
+        "جودة عالية",
+        "شكل متجانس"
+      ],
+      packaging: PACK_AR,
+    },
+  },
+  {
+    id: "Kaiser",
+    image: kaiserImg,
+    motion: "layered",
+    en: {
+      nav: "Kaiser",
+      name: "Kaiser Bread",
+      description: "Light and well-balanced Kaiser bread with a firm interior texture and distinctive outer crust, ideal for burgers and sandwiches.",
+
+      characteristics: [
+        "Light and balanced texture",
+        "Distinctive outer crust",
+        "Good aeration",
+        "Uniform shape",
+        "Delicious taste"
+      ],
+      packaging: PACK_EN,
+    },
+    ar: {
+      nav: "خبز الكيزر",
+      name: " خبز الكيزر",
+      description: "خبز كيزر خفيف و متوازن ، يتميز بقوام متماسك من الداخل  وقشرة خارجية  مميزة ، مناسب بشكل خاص لتحضير البرجر والسندوتشات",
+      characteristics: ["قوام خفيف ومتوازن",
+
+        "قشرة خارجية مميزة",
+
+        "تهوية جيدة",
+
+        "شكل متجانس",
+
+        "مذاق لذيذ"
+      ],
+      packaging: PACK_AR,
+    },
+  },
+  {
+    id: "Croissant",
+    image: croissantImg,
+    motion: "horizontal",
+    en: {
+      nav: "Croissant",
+      name: "Croissant Bread",
+      description: "A premium mix for preparing croissant products, delivering a light and flaky texture with well-defined layers and a rich, distinctive flavor.",
+
+      characteristics: [
+        "Light and flaky texture",
+        "Well-defined layers",
+        "Good aeration",
+        "Rich and delicious flavor",
+        "Consistent size and shape"
+      ],
+      packaging: PACK_EN,
+    },
+    ar: {
+      nav: "خبز الكرواسون",
+      name: " خبز الكرواسون",
+      description: "مزيج فاخر لتحضير منتجات الكرواسون، يمنحها قوامًا خفيفًا ومقرمشًا مع طبقات محددة جيدًا ونكهة غنية ومميزة.",
+      characteristics: ["قوام خفيف ومتفتت",
+
+        "طبقات واضحة المعالم",
+
+        "تهوية جيدة",
+
+        "نكهة غنية ولذيذة",
+
+        "حجم وشكل متناسقان"
+      ],
+      packaging: PACK_AR,
+    },
+  },
+    {
+    id: "frenchBread",
+    image: frenchBreadtImg,
+    motion: "dramatic",
+    en: {
+      nav: "French Bread",
+      name: "French Bread",
+      description: "Soft and light Samoli bread, ideal for preparing sandwiches and quick meals.",
+
+      characteristics: [
+        "Soft and airy texture",
+        "good aeration",
+        "delicious taste, high quality",
+        "Rich and delicious flavor",
+        "suitable for various fillings"
+      ],
+      packaging: PACK_EN,
+    },
+    ar: {
+      nav: "خبز الصامولي",
+      name: " خبز الصامولي",
+      description: "خبز صامولي ناعم وخفيف، مثالي لتحضير السندويشات والوجبات السريعة",
+      characteristics: [
+        "قوام ناعم وخفيف",
+
+        "تهوية جيدة",
+
+        "مذاق لذيذ وجودة عالية",
+
+        "نكهة غنية ولذيذة",
+
+        "مناسب لحشوات متنوعة"
       ],
       packaging: PACK_AR,
     },
