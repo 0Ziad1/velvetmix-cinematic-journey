@@ -12,7 +12,7 @@ import saucesImg from "@/assets/topping-sauces.jpg";
 import fillingsImg from "@/assets/cake-fillings.jpg";
 import toastImg from "@/assets/toastLoaf.jpg"
 import briocheImg from "@/assets/brioche.jpg"
-import kaiserImg from "@/assets/kaiser.jpg"
+import kaiserImg from "@/assets/Kaiser.jpg"
 import croissantImg from "@/assets/croissant.jpg"
 import frenchBreadtImg from "@/assets/frenchBread.jpg"
 /**
